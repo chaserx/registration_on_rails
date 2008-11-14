@@ -1,3 +1,17 @@
+== Registration on Rails
+
+This is a rewrite in rails 2.1 of an earlier project thought of as Registerer. 
+
+This app is meant to be a simple implementation of a registration app for
+small university based symposia, conferences, etc.
+
+At present, there is no user model. 
+
+== Attributions
+
+Thanks to Leslie Hensley for suggesting usesguid. 
+
+== Rails README 
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 
