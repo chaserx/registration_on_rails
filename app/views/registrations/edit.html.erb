@@ -1,0 +1,88 @@
+<h1>Editing registration</h1>
+
+<% form_for(@registration) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </p>
+  <p>
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </p>
+  <p>
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :dept %><br />
+    <%= f.text_field :dept %>
+  </p>
+  <p>
+    <%= f.label :eveningsession %><br />
+    <%= f.text_field :eveningsession %>
+  </p>
+  <p>
+    <%= f.label :guest %><br />
+    <%= f.text_field :guest %>
+  </p>
+  <p>
+    <%= f.label :partysize %><br />
+    <%= f.text_field :partysize %>
+  </p>
+  <p>
+    <%= f.label :lunch %><br />
+    <%= f.text_field :lunch %>
+  </p>
+  <p>
+    <%= f.label :bizperson %><br />
+    <%= f.text_field :bizperson %>
+  </p>
+  <p>
+    <%= f.label :bizpersonemail %><br />
+    <%= f.text_field :bizpersonemail %>
+  </p>
+  <p>
+    <%= f.label :bizpersonphone %><br />
+    <%= f.text_field :bizpersonphone %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @registration %> |
+<%= link_to 'Back', registrations_path %>

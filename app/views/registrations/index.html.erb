@@ -1,0 +1,56 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Dept</th>
+    <th>Eveningsession</th>
+    <th>Guest</th>
+    <th>Partysize</th>
+    <th>Lunch</th>
+    <th>Bizperson</th>
+    <th>Bizpersonemail</th>
+    <th>Bizpersonphone</th>
+  </tr>
+
+<% for registration in @registrations %>
+  <tr>
+    <td><%=h registration.title %></td>
+    <td><%=h registration.firstname %></td>
+    <td><%=h registration.lastname %></td>
+    <td><%=h registration.address1 %></td>
+    <td><%=h registration.address2 %></td>
+    <td><%=h registration.city %></td>
+    <td><%=h registration.state %></td>
+    <td><%=h registration.zip %></td>
+    <td><%=h registration.phone %></td>
+    <td><%=h registration.email %></td>
+    <td><%=h registration.status %></td>
+    <td><%=h registration.dept %></td>
+    <td><%=h registration.eveningsession %></td>
+    <td><%=h registration.guest %></td>
+    <td><%=h registration.partysize %></td>
+    <td><%=h registration.lunch %></td>
+    <td><%=h registration.bizperson %></td>
+    <td><%=h registration.bizpersonemail %></td>
+    <td><%=h registration.bizpersonphone %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New registration', new_registration_path %>
