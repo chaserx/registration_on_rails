@@ -1,87 +1,66 @@
-<h1>New registration</h1>
+<div id="new_reg">
+<h1>Symposium Registration</h1>
 
-<% form_for(@registration) do |f| %>
-  <%= f.error_messages %>
+<%= error_messages_for :registration %>
+<div>
+	<fieldset><legend>Personal information</legend>
+	<% form_for @registration, :html => {:multipart => true } do |f| %>
+	  <ul id="formSection">
+			<li><p><strong>Name<br /></strong><span><%= f.text_field :title, :size => 4 %> <%= label(:registration, :title) %></span> <span><%= f.text_field :firstname, :size => 20 %> <%= label(:registratnt, :firstname, "First") %></span><span><%= f.text_field :lastname, :size => 30 %> <%= label(:registration, :lastname, "Last") %></span></p></li>
+			<li><p><strong>Organization</strong><br /><span><%= f.text_field :organization %> <%= label(:registration, :organization, "University of Kentucky") %></span></p></li>
+			<li><p><strong>Department</strong><br /><span><%= f.text_field :dept %> <%= label(:registration, :dept, "OB/GYN") %></span></p></li>
+			<li><p><strong>Status</strong><br /><span><%= select(:registration, :status, {"UK Faculty" => "UK Faculty", "Non-UK Faculty" => "Non-UK Faculty", "Post-doc" => "Post-doc", "Student" => "Student", "Staff" => "Staff"}.sort, :selected => "UK Faculty") %></span></p></li>
+			<li><p><strong>Address</strong><br /><span><%= f.text_field :address1 %> <%= label(:registration, :address1, "Street Address") %></span></p></li>
+			<li><p><span><%= f.text_field :address2 %><%= label(:registration, :address2, "Address Cont.") %></span></p></li>
+			<li><p><span><%= f.text_field :city %><%= label(:registration, :city) %></span><span><%= f.text_field :state, :size => 2 %><%= label(:registration, :state) %></span></p></li>
+			<li><p><span><%= f.text_field :zip, :size => 10 %> <%= label(:registration, :zip, "Zip code") %></span></p></li>
+			<li><p><strong>Phone</strong><br /><span><%= f.text_field :phone %><%= label(:registration, :phone, "859-257-9000") %></span></p></li>
+			<li><p><strong>Email</strong><br /><span><%= f.text_field :email %> <%= label(:registration, :email, "wildcat@email.uky.edu") %></span></p></li>
+			<li><p><strong>Email confirmation</strong><br /><span><%= f.text_field :email_confirmation %> <%= label(:registration, :email, "retype: wildcat@email.uky.edu") %></span></p></li>
+		</ul>
+	</fieldset>	
+</div>
+<div class="clear">
+	<p>&nbsp;</p>
+</div>
+<div id="billing">
+	<fieldset><legend>Billing Details</legend>
+		<ul id="billSection">
+			<li><p><strong>Business Officer</strong><br /><span><%= f.text_field :bizperson %> <%= label(:registration, :bizperson, "Mr. Moneybags") %></span></p></li>
+			<li><p><strong>Email</strong><br /><span><%= f.text_field :bizpersonemail %> <%= label(:registration, :bizpersonemail, "moneybags@monopoly.com") %></span></p></li>
+			<li><p><strong>Email confirmation</strong><br /><span><%= f.text_field :bizpersonemail_confirmation %> <%= label(:registration, :bizpersonemail, "retype: moneybags@monopoly.com") %></span></p></li>
+			<li><p><strong>Phone</strong><br /><span><%= f.text_field :bizpersonphone %> <%= label(:registration, :bizpersonphone, "859-257-9000") %></span></p></li>
+		</ul>
+	</fieldset>	
+</div>
+<div class="clear">
+	<p>&nbsp;</p>
+</div>
+<div>
+	<fieldset><legend>Registration Details</legend>
+	  <p>
+	  	Will you attend the Trainee Lunch? <%= select(:registration, :lunch, {"Yes" => 1, "No" => 0}, :include_blank => true) %>
+	  </p>
+		<p>
+	  	Will you attend the evening session? <%= select(:registration, :eveningsession, {"Yes" => 1, "No" => 0}, :include_blank => true) %>
+	  </p>
+		<p>
+			Will you bring a guest to the evening session? <%= select(:registration, :guest, {"Yes" => 1, "No" => 0}, {:include_blank => true}) %>
+		</p>
+		<p>
+	    <b>Abstract</b><br />
+	    for use with paperclip later
+	  </p>
+	</fieldset>
+</div>
 
+<div class="clear">
+	<p>&nbsp;</p>
+</div>
   <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
-  </p>
-  <p>
-    <%= f.label :lastname %><br />
-    <%= f.text_field :lastname %>
-  </p>
-  <p>
-    <%= f.label :address1 %><br />
-    <%= f.text_field :address1 %>
-  </p>
-  <p>
-    <%= f.label :address2 %><br />
-    <%= f.text_field :address2 %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </p>
-  <p>
-    <%= f.label :dept %><br />
-    <%= f.text_field :dept %>
-  </p>
-  <p>
-    <%= f.label :eveningsession %><br />
-    <%= f.text_field :eveningsession %>
-  </p>
-  <p>
-    <%= f.label :guest %><br />
-    <%= f.text_field :guest %>
-  </p>
-  <p>
-    <%= f.label :partysize %><br />
-    <%= f.text_field :partysize %>
-  </p>
-  <p>
-    <%= f.label :lunch %><br />
-    <%= f.text_field :lunch %>
-  </p>
-  <p>
-    <%= f.label :bizperson %><br />
-    <%= f.text_field :bizperson %>
-  </p>
-  <p>
-    <%= f.label :bizpersonemail %><br />
-    <%= f.text_field :bizpersonemail %>
-  </p>
-  <p>
-    <%= f.label :bizpersonphone %><br />
-    <%= f.text_field :bizpersonphone %>
-  </p>
-  <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "Register" %>
   </p>
 <% end %>
 
 <%= link_to 'Back', registrations_path %>
+</div>

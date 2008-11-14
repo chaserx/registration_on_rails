@@ -52,3 +52,115 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+legend{font-size: 1.5em;}
+fieldset{
+	padding:10px;
+	margin-top:10px;
+	background-color:#CFEBF6;
+	border: 1px solid #14568A;
+}
+fieldset legend {
+	font-weight: bold;
+	background:#14568A;
+	padding:5px;
+	font-size: 1.2em;
+	color:#fff;
+}
+ul#formSection {
+	margin:0;
+	padding:0;
+}
+ul#formSection li {
+	margin:0;
+	padding:0 0 20px 0;
+	position:relative;
+	clear:both;
+	list-style-type:none;
+}
+ul#formSection li span {
+	float:left;
+	padding-right: 2px;
+}
+
+div#billing ul#billSection {
+	margin:0;
+	padding:0;
+}
+div#billing ul#billSection li {
+	margin:0;
+	padding:0 0 20px 0;
+	position:relative;
+	clear:both;
+	list-style-type:none;
+}
+div#billing ul#billSection li span {
+	float:left;
+	padding-right: 2px;
+}
+ul#billSection li span label{
+	margin:0;
+	padding-top:3px;
+	clear:both;
+	font-size:9px;
+	line-height:9px;
+	color:#444;
+	display:block;
+	font-weight:bold;
+}
+
+form li span label{
+	margin:0;
+	padding-top:3px;
+	clear:both;
+	font-size:9px;
+	line-height:9px;
+	color:#444;
+	display:block;
+}
+.clear{
+	clear:both !important;
+}
+form li label{
+	font-weight:bold;
+}
+table{ border-collapse: collapse; border:1px solid black;}
+table tr.rowA { background-color: white; }
+table tr.rowB { background-color: silver; }
+table td{padding:6px;}
+table th {border-bottom:1px solid black;}
+#stats{
+	border:1px solid #80B5D0;
+	background-color:#C6D9E9;
+	padding:20px;
+}
+#stats ul, #stats ul li {display:inline;}
+#stats ul li {list-style-type:none;}
+.stat{
+	padding-left:20px;
+}
+.stat span{}
+.clearthemall{
+	clear: both;
+}
+#new_reg{
+	width:600px;
+}

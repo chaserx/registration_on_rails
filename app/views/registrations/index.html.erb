@@ -1,4 +1,16 @@
-<h1>Listing registrations</h1>
+<h2>Listing registrations for <%= display_eventname %></h2>
+	
+<div id="stats">
+	<ul>
+		<li><strong>Attendee count:  <span><%= number_of_attendees %></span></strong></li>
+		<li class="stat"><strong>Lunch count:  <span><%= number_of_attendees_for_lunch %></span></strong></li>
+		<li class="stat"><strong>Dinner count:  <span><%= number_of_attendees_for_dinner %></span></strong></li>
+		<li class="stat"><strong>Abstract count:  <span>should work after paperclip</span></strong></li>
+	</ul>
+</div>
+<div class="clearthemall">
+	&nbsp;
+</div>
 
 <table>
   <tr>
@@ -11,20 +23,21 @@
     <th>State</th>
     <th>Zip</th>
     <th>Phone</th>
+    <th>Organization</th>
+		<th>Dept.</th>
     <th>Email</th>
-    <th>Status</th>
-    <th>Dept</th>
-    <th>Eveningsession</th>
-    <th>Guest</th>
-    <th>Partysize</th>
-    <th>Lunch</th>
-    <th>Bizperson</th>
-    <th>Bizpersonemail</th>
-    <th>Bizpersonphone</th>
+    <th>Lunch?</th>
+		<th>Evening Session</th>
+		<th># for dinner</th>
+		<th>Bus. Officer</th>
+		<th>Bus. Officer Email</th>
+		<th>Bus. Officer Phone</th>
+		<th>Reg. Date</th>
+		<th colspan="3">Actions</th>
   </tr>
 
 <% for registration in @registrations %>
-  <tr>
+  <tr class="<%= cycle('rowA', 'rowB') %>">
     <td><%=h registration.title %></td>
     <td><%=h registration.firstname %></td>
     <td><%=h registration.lastname %></td>
@@ -33,17 +46,17 @@
     <td><%=h registration.city %></td>
     <td><%=h registration.state %></td>
     <td><%=h registration.zip %></td>
-    <td><%=h registration.phone %></td>
-    <td><%=h registration.email %></td>
-    <td><%=h registration.status %></td>
-    <td><%=h registration.dept %></td>
-    <td><%=h registration.eveningsession %></td>
-    <td><%=h registration.guest %></td>
-    <td><%=h registration.partysize %></td>
-    <td><%=h registration.lunch %></td>
-    <td><%=h registration.bizperson %></td>
-    <td><%=h registration.bizpersonemail %></td>
-    <td><%=h registration.bizpersonphone %></td>
+    <td><%= format_phone(h(registration.phone)) %></td>
+    <td><%=h registration.organization %></td>
+		<td><%= h registration.dept %></td>
+    <td><%= mail_to(h(registration.email)) %></td>
+		<td><%= going_lunch?(registration) %></td>
+		<td><%= going_esession?(registration) %></td>
+		<td><%= h registration.partysize %></td>
+		<td><%= h registration.bizperson %></td>
+		<td><%= h registration.bizpersonemail %></td>
+		<td><%= h registration.bizpersonphone %></td>
+		<td><%= h time_ago_in_words(registration.created_at) %> ago</td>
     <td><%= link_to 'Show', registration %></td>
     <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
     <td><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -54,3 +67,8 @@
 <br />
 
 <%= link_to 'New registration', new_registration_path %>
+<%= link_to 'Download CSV File', formatted_registrations_path(:csv) %>
+
+
+
+
