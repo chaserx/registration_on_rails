@@ -4,7 +4,7 @@
 <%= error_messages_for :registration %>
 <div>
 	<fieldset><legend>Personal information</legend>
-	<% form_for @registration, :html => {:multipart => true } do |f| %>
+	<% form_for @registration, :html => { :multipart => true } do |f| %>
 	  <ul id="formSection">
 			<li><p><strong>Name<br /></strong><span><%= f.text_field :title, :size => 4 %> <%= label(:registration, :title) %></span> <span><%= f.text_field :firstname, :size => 20 %> <%= label(:registratnt, :firstname, "First") %></span><span><%= f.text_field :lastname, :size => 30 %> <%= label(:registration, :lastname, "Last") %></span></p></li>
 			<li><p><strong>Organization</strong><br /><span><%= f.text_field :organization %> <%= label(:registration, :organization, "University of Kentucky") %></span></p></li>
@@ -49,7 +49,7 @@
 		</p>
 		<p>
 	    <b>Abstract</b><br />
-	    for use with paperclip later
+			<%= f.file_field :abstract %>
 	  </p>
 	</fieldset>
 </div>

@@ -1,5 +1,7 @@
 class Registration < ActiveRecord::Base
   usesguid
+
+  has_attached_file :abstract
   
   #run some cleanup methods
   before_validation :chop_title_whitespace

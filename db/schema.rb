@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081114223744) do
+ActiveRecord::Schema.define(:version => 20081115010129) do
 
   create_table "registrations", :force => true do |t|
     t.string   "title"
@@ -24,16 +24,20 @@ ActiveRecord::Schema.define(:version => 20081114223744) do
     t.string   "email"
     t.string   "status"
     t.string   "dept"
-    t.integer  "eveningsession", :limit => 1
-    t.integer  "guest",          :limit => 1
+    t.integer  "eveningsession",        :limit => 1
+    t.integer  "guest",                 :limit => 1
     t.integer  "partysize"
-    t.integer  "lunch",          :limit => 1
+    t.integer  "lunch",                 :limit => 1
     t.string   "bizperson"
     t.string   "bizpersonemail"
     t.string   "bizpersonphone"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "organization"
+    t.string   "abstract_file_name"
+    t.string   "abstract_content_type"
+    t.integer  "abstract_file_size"
+    t.datetime "abstract_updated_at"
   end
 
 end
