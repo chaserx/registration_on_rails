@@ -94,7 +94,12 @@
 </p>
 <p>
 	<b>Abstract:</b>
-	<%= link_to_if @registration.abstract, 'download abstract', @registration.abstract.url %>
+	<% if @registration.abstract_file_name.nil?%>
+		no abstract
+	<% else %>
+		<%= link_to 'download abstract', @registration.abstract.url %>
+	<% end %>
+	
 </p>
 
 <%= link_to 'Edit', edit_registration_path(@registration) %> |
