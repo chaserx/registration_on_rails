@@ -34,12 +34,14 @@ module RegistrationsHelper
     return total
   end
 
-  
+  def number_of_abstracts
+    total = 0
+    return Registration.find_by_sql('SELECT * FROM registrations WHERE abstract_file_name NOT LIKE ""').size
+  end
   
   def latest_attendee
     @registration = Registration.find(:last)
-    
-    return "#{@registration.last.firstname} #{@registration.last.lastname}<br />#{time_ago_in_words(@registration.last.created_at)} ago"
+    return "#{@registration.firstname} #{@registration.lastname}<br />#{time_ago_in_words(@registration.created_at)} ago"
   end
   
   def format_phone(reg)

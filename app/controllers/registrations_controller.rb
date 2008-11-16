@@ -1,3 +1,5 @@
+require 'fastercsv'
+
 class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
@@ -7,6 +9,18 @@ class RegistrationsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @registrations }
+      format.csv {
+            registrations = Registration.find(:all)
+            csv = FasterCSV.generate do |csv|
+              csv << ["Name", "Date Registered"]
+              registrations.each do |registration|
+                csv << [[registration.title, registration.firstname, registration.lastname].join(" ").strip, registration.created_at]
+              end
+            end
+            t = Time.now
+            send_data(csv, :filename => "Symposiumregistrations#{t.strftime("%m_%d_%Y")}.csv", 
+                      :type => 'text/csv', :disposition => 'attachment')
+          }
     end
   end
 
@@ -18,6 +32,7 @@ class RegistrationsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @registration }
+      
     end
   end
 
