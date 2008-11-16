@@ -1,0 +1,26 @@
+Items left undone:
+
+== Authorization
+
+Limit the index, destroy, update, and edit actions of the registration controller to an administrator
+
+== Mailer
+
+Mail a confirmation to regisrant, billing officer, and admin
+
+== App availablilty
+
+Control registration availability by comparing Time.now to datetime in config.yml
+
+== Abstracts
+
+Download all abstracts into a single zip file
+
+== Style
+
+Really could use a lot of work making this pretty.
+
+== Welcome
+Change route to welcome controller 
+index action
+Static page with info and link to register

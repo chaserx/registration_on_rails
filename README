@@ -1,11 +1,17 @@
 == Registration on Rails
 
-This is a rewrite in rails 2.1 of an earlier project thought of as Registerer. 
+This is a rewrite in Rails 2.1 of an earlier project thought of as Registerer. 
 
 This app is meant to be a simple implementation of a registration app for
 small university based symposia, conferences, etc.
 
-At present, there is no user model. 
+A config.yml file allows for the use of some constants. Like symposium title, dates, etc.
+
+At present, there is no user model.
+
+== Requirements
+
+FasterCSV gem. http://fastercsv.rubyforge.org/
 
 == Attributions
 
