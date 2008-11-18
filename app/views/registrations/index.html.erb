@@ -12,7 +12,11 @@
 <div class="clearthemall">
 	&nbsp;
 </div>
-
+<div id="adminActions">
+	<%= link_to 'New registration', new_registration_path %>
+	<%= link_to 'Download CSV File', formatted_registrations_path(:csv) %>
+	<%= link_to 'Download ALL Attachment', formatted_registrations_path(:zip) %>
+</div>
 <table id="dataTable">
   <tr>
     <th>Title</th>
@@ -34,11 +38,11 @@
 		<th>Bus. Officer Email</th>
 		<th>Bus. Officer Phone</th>
 		<th>Reg. Date</th>
-		<th colspan="3">Actions</th>
+		<th>Actions</th>
   </tr>
 
 <% for registration in @registrations %>
-  <tr class="<%= cycle('rowA', 'rowB') %>">
+  <tr class="<%= cycle('even', 'odd') %>">
     <td><%=h registration.title %></td>
     <td><%=h registration.firstname %></td>
     <td><%=h registration.lastname %></td>
@@ -58,18 +62,17 @@
 		<td><%= h registration.bizpersonemail %></td>
 		<td><%= h registration.bizpersonphone %></td>
 		<td><%= h time_ago_in_words(registration.created_at) %> ago</td>
-    <td><%= link_to 'Show', registration %></td>
-    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
-    <td><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', registration %><br /><%= link_to 'Edit', edit_registration_path(registration) %><br /><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New registration', new_registration_path %>
-<%= link_to 'Download CSV File', formatted_registrations_path(:csv) %>
-<%= link_to 'Download ALL Attachment', formatted_registrations_path(:zip) %>
+<div id="adminActions">
+	<%= link_to 'New registration', new_registration_path %>
+	<%= link_to 'Download CSV File', formatted_registrations_path(:csv) %>
+	<%= link_to 'Download ALL Attachment', formatted_registrations_path(:zip) %>
+</div>
 
 
 

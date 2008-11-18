@@ -142,11 +142,13 @@ form li span label{
 form li label{
 	font-weight:bold;
 }
+/*
 table{ border-collapse: collapse; border:1px solid black;}
 table tr.rowA { background-color: white; }
 table tr.rowB { background-color: silver; }
 table td{padding:6px;}
 table th {border-bottom:1px solid black;}
+*/
 #stats{
 	border:1px solid #80B5D0;
 	background-color:#C6D9E9;
