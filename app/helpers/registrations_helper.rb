@@ -41,7 +41,7 @@ module RegistrationsHelper
   
   def latest_attendee
     @registration = Registration.find(:last)
-    return "#{@registration.firstname} #{@registration.lastname}<br />#{time_ago_in_words(@registration.created_at)} ago"
+    return "#{@registration.firstname} #{@registration.lastname} - #{time_ago_in_words(@registration.created_at)} ago"
   end
   
   def format_phone(reg)
