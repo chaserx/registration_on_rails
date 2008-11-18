@@ -1,20 +1,24 @@
 Items left undone:
 
+== DB / ActiveRecord optimization
+
+Reduce the number of hits to the DB. Caches, etc. 
+
 == Authorization
 
 Limit the index, destroy, update, and edit actions of the registration controller to an administrator
 
 == Mailer
 
-Mail a confirmation to regisrant, billing officer, and admin
+Mail a confirmation to registrant, billing officer, and admin
 
-== App availablilty
+== App availability
 
 Control registration availability by comparing Time.now to datetime in config.yml
 
 == Abstracts
 
-Download all abstracts into a single zip file
+Done. 11.17.08 - Download all abstracts into a single zip file
 
 == Style
 

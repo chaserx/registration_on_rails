@@ -12,10 +12,16 @@ At present, there is no user model.
 == Requirements
 
 FasterCSV gem. http://fastercsv.rubyforge.org/
+Rubyzip gem. http://rubyzip.sourceforge.net/
 
 == Attributions
 
 Thanks to Leslie Hensley for suggesting usesguid. 
+
+== plugins
+usesguid
+
+paperclip
 
 == Rails README 
 == Welcome to Rails
