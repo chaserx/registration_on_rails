@@ -2,29 +2,38 @@ Items left undone:
 
 == DB / ActiveRecord optimization
 
-Reduce the number of hits to the DB. Caches, etc. 
+Reduce the number of hits to the DB through Caches, etc. 
+
 
 == Authorization
 
 Limit the index, destroy, update, and edit actions of the registration controller to an administrator
+If and only if user table is empty, then show create new admin user. Allow create new user only after login by admin. 
+
 
 == Mailer
 
 Mail a confirmation to registrant, billing officer, and admin
+Mail a reminder to registrant X days before event. 
+
 
 == App availability
 
 Control registration availability by comparing Time.now to datetime in config.yml
 
+
 == Abstracts
 
 Done. 11.17.08 - Download all abstracts into a single zip file
 
+
 == Style
 
-Really could use a lot of work making this pretty.
+Need help. This really will require a lot of work making this pretty.
+
 
 == Welcome
-Change route to welcome controller 
+
+Change map.root route to a welcome controller where to post a (semi-)static event page. 
 index action
 Static page with info and link to register
