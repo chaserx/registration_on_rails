@@ -9,3 +9,5 @@ Mime::Type.register "application/vnd.openxmlformats-officedocument.wordprocessin
 Mime::Type.register "application/msword", :doc
 Mime::Type.register "text/plain", :txt
 Mime::Type.register "application/pdf", :pdf
+#CSRF Protection interm fix for Rails 2.1
+Mime::Type.unverifiable_types.delete(:text)
