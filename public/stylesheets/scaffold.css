@@ -166,3 +166,7 @@ table th {border-bottom:1px solid black;}
 #new_reg{
 	width:600px;
 }
+#footer{
+	margin-top:20px;
+	text-align:right;
+}

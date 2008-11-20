@@ -1,5 +1,10 @@
 Items left undone:
 
+== Testing
+
+unit, functional, and integration tests
+
+
 == DB / ActiveRecord optimization
 
 Reduce the number of hits to the DB through Caches, etc. 
