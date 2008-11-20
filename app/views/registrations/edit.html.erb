@@ -1,6 +1,6 @@
 <h1>Editing registration</h1>
 
-<% form_for(@registration) do |f| %>
+<% form_for @registration, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -78,6 +78,10 @@
   <p>
     <%= f.label :bizpersonphone %><br />
     <%= f.text_field :bizpersonphone %>
+  </p>
+	<p>
+    <b>Abstract</b><br />
+		<%= f.file_field :abstract %>
   </p>
   <p>
     <%= f.submit "Update" %>

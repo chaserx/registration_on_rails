@@ -108,7 +108,7 @@ class RegistrationsController < ApplicationController
   # PUT /registrations/1.xml
   def update
     @registration = Registration.find(params[:id])
-
+    
     respond_to do |format|
       if @registration.update_attributes(params[:registration])
         flash[:notice] = 'Registration was successfully updated.'
