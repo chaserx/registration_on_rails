@@ -32,6 +32,11 @@ Control registration availability by comparing Time.now to datetime in config.ym
 Done. 11.17.08 - Download all abstracts into a single zip file
 
 
+== Registration Fees
+
+Although, there are no plans to include a payment gateway. Instructions for paying by check or purchase order will be implemented. 
+Specifically, if registrants signup for dinner they will be charged a fee. 
+
 == Style
 
 Need help. This really will require a lot of work making this pretty.

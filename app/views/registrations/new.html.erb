@@ -42,10 +42,12 @@
 	  	Will you attend the Trainee Lunch? <%= select(:registration, :lunch, {"Yes" => 1, "No" => 0}, :include_blank => true) %>
 	  </p>
 		<p>
-	  	Will you attend the evening session? <%= select(:registration, :eveningsession, {"Yes" => 1, "No" => 0}, :include_blank => true) %>
+	  	Will you attend the evening session? <%= select(:registration, :eveningsession, {"Yes" => 1, "No" => 0}, :include_blank => true) %><br />
+			<span style="font-size:0.8em;">(<%= label(:registration, :eveningsession, "A fee of $X will apply to Faculty, a fee of $X for all others") %>)</span>
 	  </p>
 		<p>
-			Will you bring a guest to the evening session? <%= select(:registration, :guest, {"Yes" => 1, "No" => 0}, {:include_blank => true}) %>
+			Will you bring a guest to the evening session? <%= select(:registration, :guest, {"Yes" => 1, "No" => 0}, {:include_blank => true}) %><br />
+			<span style="font-size:0.8em;">(<%= label(:registration, :guest, "No extra fee, just keeping an accurate count") %>)</span>
 		</p>
 		<p>
 	    <b>Abstract</b><br />
