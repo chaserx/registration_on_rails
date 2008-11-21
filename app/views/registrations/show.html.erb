@@ -1,3 +1,21 @@
+<h1>Registration Receipt</h1>
+<div id="thanks">
+	<p><%= @registration.created_at %></p>
+	<p>Thank you for registering, <%= prettyNameFormat %>. <br />Please use this receipt to send in your participant payment and keep a copy for your records.</p>
+	<p>Your confirmation number is: <%= @registration.id %></p>
+</div>
+<div id="eventInfo">
+	<h2><%= display_eventname %></h2>
+	<h3><%= display_eventdate %></h3>
+</div>
+<div id="regInfo">
+	<h4>Personal Info</h4>
+	<ul>
+		<li><%= prettyNameFormat %></li>
+		<li><%= @registration.organization %></li>
+		<li><%= @registration.status %></li>
+	</ul>
+</div>
 <p>
   <b>Title:</b>
   <%=h @registration.title %>
@@ -97,7 +115,7 @@
 	<% if @registration.abstract_file_name.nil?%>
 		no abstract
 	<% else %>
-		<%= link_to 'download abstract', @registration.abstract.url %>
+		<%= link_to "#{@registration.abstract.original_filename}", @registration.abstract.url %>
 	<% end %>
 	
 </p>
