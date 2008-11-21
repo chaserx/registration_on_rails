@@ -1,11 +1,13 @@
-body { background-color: #fff; color: #333; }
+*{
+	outline:none;
+}
+body { background-color: #fff; color: #333;}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
 }
-
 pre {
   background-color: #eee;
   padding: 10px;
@@ -168,5 +170,12 @@ table th {border-bottom:1px solid black;}
 }
 #footer{
 	margin-top:20px;
+	text-align:right;
+}
+#adminHeader{
+	margin:0;
+	padding:0;
+	color:#000;
+	font-size:0.8em;
 	text-align:right;
 }

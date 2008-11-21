@@ -37,9 +37,18 @@ Done. 11.17.08 - Download all abstracts into a single zip file
 Although, there are no plans to include a payment gateway. Instructions for paying by check or purchase order will be implemented. 
 Specifically, if registrants signup for dinner they will be charged a fee. 
 
+
+== Confirmation 
+
+A receipt.
+Give the user a pretty and printer friendly page that confirms their confirmation.
+Show fees if any. 
+Provide instructions on where to send payment information.
+
+
 == Style
 
-Need help. This really will require a lot of work making this pretty.
+Need some professional help. This really will require a lot of work making this pretty.
 
 
 == Welcome
