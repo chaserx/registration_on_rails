@@ -4,17 +4,17 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
   def index
-    @registrations = Registration.find(:all)
+    @registrations = Registration.find(:all, :order => "created_at ASC")
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @registrations }
       format.csv {
-            registrations = Registration.find(:all)
+            registrations = Registration.find(:all, :order => "lastname ASC")
             csv = FasterCSV.generate do |csv|
-              csv << ["Name", "Date Registered"]
+              csv << ["Name", "Dept.", "Org.", "Address1", "Address2", "City", "State", "Zip", "Phone", "email", "Lunch", "EveningSession", "Partysize", "BusinessOfficer", "BizOfficerEmail", "BizOfficerPhone", "Date Registered"]
               registrations.each do |registration|
-                csv << [[registration.title, registration.firstname, registration.lastname].join(" ").strip, registration.created_at]
+                csv << [[registration.title, registration.firstname, registration.lastname].join(" ").strip, registration.dept, registration.organization, registration.address1, registration.address2, registration.city, registration.state, registration.zip, registration.phone, registration.email, registration.lunch, registration.eveningsession, registration.partysize, registration.bizperson, registration.bizpersonemail, registration.bizpersonphone, registration.created_at ]
               end
             end
             t = Time.now

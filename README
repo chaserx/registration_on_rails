@@ -21,6 +21,8 @@ Thanks to Alen Grakalic for tablecloth css and js.
 Thanks to Henrik Nyh for helping debug the problem with the zip and paperclip.
 
 == plugins
+brain_buster captcha
+
 usesguid
 
 paperclip
