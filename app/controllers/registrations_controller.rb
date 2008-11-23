@@ -1,4 +1,6 @@
 class RegistrationsController < ApplicationController
+  before_filter :create_brain_buster, :only => [:new]
+  before_filter :validate_brain_buster, :only => [:create]
   # GET /registrations
   # GET /registrations.xml
   def index
@@ -131,5 +133,9 @@ class RegistrationsController < ApplicationController
       format.html { redirect_to(registrations_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def render_or_redirect_for_captcha_failure
+      render :action => "new"
   end
 end

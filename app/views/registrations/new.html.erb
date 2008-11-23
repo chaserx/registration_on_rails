@@ -51,11 +51,16 @@
 		</p>
 		<p>
 	    <b>Abstract</b><br />
-			<%= f.file_field :abstract %>
+			<%= f.file_field :abstract %><br />
+			<span style="font-size:0.8em; font-weight:bold;"><%= label(:registration, :abstract, "Acceptable file types: .pdf, .doc, .rtf, .txt") %></span>
 	  </p>
 	</fieldset>
 </div>
-
+<div>
+	<fieldset><legend>Turing test</legend>
+		<%= render :partial => '/captcha' %> 
+	</fieldset>
+</div>
 <div class="clear">
 	<p>&nbsp;</p>
 </div>
