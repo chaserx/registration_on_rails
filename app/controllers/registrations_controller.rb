@@ -18,7 +18,7 @@ class RegistrationsController < ApplicationController
               end
             end
             t = Time.now
-            send_data(csv, :filename => "Symposiumregistrations#{t.strftime("%m_%d_%Y")}.csv", 
+            send_data(csv, :filename => "Registrations#{t.strftime("%m_%d_%Y")}.csv", 
                       :type => 'text/csv', :disposition => 'attachment')
           }
       #format.zip code mostly from Practical Rails Plugins by Nick Plante, David Berube    
