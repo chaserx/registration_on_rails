@@ -1,4 +1,9 @@
 class AccountsController < ApplicationController
+  layout "admin"
+  
+  before_filter :create_brain_buster, :only => [:new]
+  before_filter :validate_brain_buster, :only => [:create]
+  
   def new
     @account = Account.new
   end
@@ -13,4 +18,14 @@ class AccountsController < ApplicationController
       render :action => 'new'
     end
   end
+  
+  def index
+    accounts = Account.find(:all)
+    if accounts.empty?
+      redirect_to signup_url
+    else
+      redirect_to login_url
+    end
+  end
+  
 end

@@ -20,5 +20,8 @@
     <%= f.label :password_confirmation, "Confirm Password" %><br />
     <%= f.password_field :password_confirmation %>
   </p>
+	<p>
+		<%= render :partial => '/captcha' %> 
+	</p>
   <p><%= f.submit "Sign up" %></p>
 <% end %>
