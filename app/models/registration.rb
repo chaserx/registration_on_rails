@@ -8,7 +8,7 @@ class Registration < ActiveRecord::Base
   
   #run some cleanup methods
   before_validation :chop_title_whitespace
-  before_save :capitalize_names, :capitalize_city, :set_party_size
+  before_save :capitalize_names, :capitalize_city, :set_party_size, :set_fees
   before_update :capitalize_names, :capitalize_city
   
   #validating name
@@ -74,6 +74,25 @@ class Registration < ActiveRecord::Base
         self.partysize = 1
       else
         self.partysize = 0
+      end
+    end
+    
+    def set_fees
+      if self.eveningsession? 
+        case self.status
+          when 'UK Faculty'
+            self.fees = 50.00
+          when 'Non-UK Faculty'
+            self.fees = 50.00
+          when 'Staff'
+            self.fees = 25.00
+          when 'Student'
+            self.fees = 25.00
+          when 'Post-doc'
+            self.fees = 25.00
+          end
+      else
+        self.fees = 0.00
       end
     end
 end

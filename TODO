@@ -1,5 +1,10 @@
 Items left undone:
 
+== Edit View Error
+
+Paperclip trying to validate file type even when file is null.
+
+
 == Security
 
 Lots to do here.
@@ -40,6 +45,9 @@ Done. 11.17.08 - Download all abstracts into a single zip file
 
 == Registration Fees
 
+Done. 11.23.08
+Added a case statement to set fees based on status and going to the evening session.
+The fees/prices could be pulled out to the config.yml file.
 Although, there are no plans to include a payment gateway. Instructions for paying by check or purchase order will be implemented. 
 Specifically, if registrants signup for dinner they will be charged a fee. 
 
@@ -48,7 +56,8 @@ Specifically, if registrants signup for dinner they will be charged a fee.
 
 A receipt.
 Give the user a pretty and printer friendly page that confirms their confirmation.
-Show fees if any. 
+Now Recording fees. 11.23.08 - Show fees if any.
+ 
 Provide instructions on where to send payment information.
 
 

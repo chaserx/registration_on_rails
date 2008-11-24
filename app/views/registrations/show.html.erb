@@ -15,6 +15,7 @@
 		<li><%= @registration.organization %></li>
 		<li><%= @registration.status %></li>
 	</ul>
+	<p>Registration Fees: <%= number_to_currency(@registration.fees) %></p>
 </div>
 <p>
   <b>Title:</b>

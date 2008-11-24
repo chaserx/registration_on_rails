@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081123192420) do
+ActiveRecord::Schema.define(:version => 20081124031408) do
 
   create_table "brain_busters", :force => true do |t|
     t.string "question"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20081123192420) do
     t.string   "abstract_content_type"
     t.integer  "abstract_file_size"
     t.datetime "abstract_updated_at"
+    t.float    "fees"
   end
 
 end
