@@ -1,6 +1,7 @@
 class RegistrationsController < ApplicationController
   before_filter :create_brain_buster, :only => [:new]
   before_filter :validate_brain_buster, :only => [:create]
+  before_filter :login_required, :except => [:new, :create, :show]
   # GET /registrations
   # GET /registrations.xml
   def index

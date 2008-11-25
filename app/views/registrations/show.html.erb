@@ -1,3 +1,9 @@
+<% if logged_in? %>
+	<div id="adminHeader">
+		Welcome <%= current_account.username %>! Not you?
+	  <%= link_to "Log out", logout_path %>
+	</div>
+<% end %>
 <h1>Registration Receipt</h1>
 <div id="thanks">
 	<p><%= @registration.created_at %></p>

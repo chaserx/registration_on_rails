@@ -40,7 +40,7 @@ module RegistrationsHelper
   end
   
   def latest_attendee
-    @registration = Registration.find(:last)
+    @registration = Registration.find(:last, :order => 'created_at ASC')
     return "#{@registration.firstname} #{@registration.lastname} - #{time_ago_in_words(@registration.created_at)} ago"
   end
   
