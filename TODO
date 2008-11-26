@@ -1,7 +1,7 @@
 Items left undone:
 
 == Edit View Error
-
+FIXED - Modified Model to validate only on :create - 11.26.08
 Paperclip trying to validate file type even when file is null.
 
 
@@ -22,7 +22,7 @@ Reduce the number of hits to the DB through Caches, etc.
 
 
 == Authorization
-
+Partially done - 11.24.08
 Limit the index, destroy, update, and edit actions of the registration controller to an administrator
 If and only if user table is empty, then show create new admin user. Allow create new user only after login by admin. 
 Could set the initial admin information in the config.yml file using a rake task.

@@ -3,8 +3,8 @@ class Registration < ActiveRecord::Base
 
   has_attached_file :abstract
   
-  validates_attachment_content_type :abstract, :content_type => ['application/msword', 'application/pdf', 'text/plain', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/richtext']
-  validates_attachment_size :abstract, :less_than => 5.megabytes
+  validates_attachment_content_type :abstract, :content_type => ['application/msword', 'application/pdf', 'text/plain', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/richtext'], :on => :create
+  validates_attachment_size :abstract, :less_than => 5.megabytes, :on => :create
   
   #run some cleanup methods
   before_validation :chop_title_whitespace
