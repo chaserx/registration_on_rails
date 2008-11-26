@@ -62,4 +62,6 @@ module RegistrationsHelper
   def prettyNameFormat
     return @registration.title + " " + @registration.firstname + " " + @registration.lastname
   end
+  
+  
 end

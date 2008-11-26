@@ -1,8 +1,8 @@
 Items left undone:
 
 == Edit View Error
-FIXED - Modified Model to validate only on :create - 11.26.08
-Paperclip trying to validate file type even when file is null.
+
+Paperclip trying to validate file type even when file is null prior to edit/update_params
 
 
 == Security
