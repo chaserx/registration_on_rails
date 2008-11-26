@@ -126,6 +126,7 @@
 	<% end %>
 	
 </p>
-
+<% if logged_in? %>
 <%= link_to 'Edit', edit_registration_path(@registration) %> |
 <%= link_to 'Back', registrations_path %>
+<% end %>

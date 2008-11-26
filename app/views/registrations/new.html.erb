@@ -68,6 +68,7 @@
     <%= f.submit "Register" %>
   </p>
 <% end %>
-
+<% if logged_in? %>
 <%= link_to 'Back', registrations_path %>
+<% end %>
 </div>
