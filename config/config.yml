@@ -5,3 +5,5 @@ config:
   reg_stop_date:  May 13, 2008
   location: My University
   director: Symposium Director, Ph.D.
+  director_address: Department of Agile Development<br />1 Admin Building<br />My University<br />Collegetown, Anystate<br />10101<br />agile@campus.edu<br />(555) 555-1212
+  secretary:  Ms. Moneybags, Dept. of Agile Development

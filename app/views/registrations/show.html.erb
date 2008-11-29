@@ -21,111 +21,42 @@
 		<li><%= @registration.organization %></li>
 		<li><%= @registration.status %></li>
 	</ul>
-	<p>Registration Fees: <%= number_to_currency(@registration.fees) %></p>
+	<h4>Contact Info</h4>
+	<ul>
+		<li><%= @registration.email %></li>
+		<li><%= number_to_phone(@registration.phone, {:area_code => true}) %></li>
+		<li><%= @registration.address1 %><br />
+				<%= @registration.address2 %><br />
+				<%= @registration.city %>,&nbsp;<%= @registration.state %>&nbsp;<%= @registration.zip %></li>
+	</ul>
+	<h4>Registration Info</h4>
+	<ul>
+		<li>Lunch: <%= going_lunch?(@registration) %></li>
+		<li>Evening session: <%= going_esession?(@registration) %></li>
+		<li>Partysize for dinner: <%= @registration.partysize %></li>
+		<li>Abstract: <%= getAbstract(@registration) %></li>
+	</ul>
 </div>
-<p>
-  <b>Title:</b>
-  <%=h @registration.title %>
-</p>
-
-<p>
-  <b>Firstname:</b>
-  <%=h @registration.firstname %>
-</p>
-
-<p>
-  <b>Lastname:</b>
-  <%=h @registration.lastname %>
-</p>
-
-<p>
-  <b>Address1:</b>
-  <%=h @registration.address1 %>
-</p>
-
-<p>
-  <b>Address2:</b>
-  <%=h @registration.address2 %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%=h @registration.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%=h @registration.state %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%=h @registration.zip %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%=h @registration.phone %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @registration.email %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%=h @registration.status %>
-</p>
-
-<p>
-  <b>Dept:</b>
-  <%=h @registration.dept %>
-</p>
-
-<p>
-  <b>Eveningsession:</b>
-  <%=h @registration.eveningsession %>
-</p>
-
-<p>
-  <b>Guest:</b>
-  <%=h @registration.guest %>
-</p>
-
-<p>
-  <b>Partysize:</b>
-  <%=h @registration.partysize %>
-</p>
-
-<p>
-  <b>Lunch:</b>
-  <%=h @registration.lunch %>
-</p>
-
-<p>
-  <b>Bizperson:</b>
-  <%=h @registration.bizperson %>
-</p>
-
-<p>
-  <b>Bizpersonemail:</b>
-  <%=h @registration.bizpersonemail %>
-</p>
-
-<p>
-  <b>Bizpersonphone:</b>
-  <%=h @registration.bizpersonphone %>
-</p>
-<p>
-	<b>Abstract:</b>
-	<% if @registration.abstract_file_name.nil?%>
-		no abstract
-	<% else %>
-		<%= link_to "#{@registration.abstract.original_filename}", @registration.abstract.url %>
-	<% end %>
-	
-</p>
+<div id="payment">
+	<h2>Payment instructions</h2>
+	<p><strong>Registration Fees: <%= number_to_currency(@registration.fees) %></strong></p>
+	<h3>Business officer</h3>
+	<ul>
+		<li><%=h @registration.bizperson %></li>
+		<li><%=h @registration.bizpersonemail %></li>
+		<li><%=h @registration.bizpersonphone %></li>
+	</ul>
+	<h3>On-campus</h3>
+	<p>Please supply this receipt to your departmental business officer for payment by IDIV.</p>
+	<p>Questions? Please contact <%= display_secretary %>.</p>
+	<p>Please transfer funds into account: 30XXXXXXX00 before <%= display_reg_stop_date %></p>
+	<h3>Off-campus</h3>
+	<p>Mail a copy of this registration receipt along with your payment by <%= display_reg_stop_date %> to:<br />
+		<%= display_director %><br />
+		Symposium Director<br />
+		<%= display_director_address %>
+		</p>
+</div>
 <% if logged_in? %>
 <%= link_to 'Edit', edit_registration_path(@registration) %> |
 <%= link_to 'Back', registrations_path %>
