@@ -67,7 +67,7 @@ module RegistrationsHelper
     if arg.abstract_file_name.nil?
   		return "no abstract"
   	else
-  		return link_to "#{arg.abstract.original_filename}", arg.abstract.url 
+  		return link_to ("#{arg.abstract.original_filename}", arg.abstract.url) 
   	end
   end
 end

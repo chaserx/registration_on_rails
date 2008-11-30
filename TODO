@@ -24,6 +24,8 @@ Reduce the number of hits to the DB through Caches, etc.
 == Authorization
 Partially done - 11.24.08
 Limit the index, destroy, update, and edit actions of the registration controller to an administrator
+
+Wondering if this solves the problem below: before_filter :login_required, :only => [:new, :create] unless Account.nil?
 If and only if user table is empty, then show create new admin user. Allow create new user only after login by admin. 
 Could set the initial admin information in the config.yml file using a rake task to create accounts in users table.
 
@@ -32,6 +34,7 @@ Could set the initial admin information in the config.yml file using a rake task
 
 Mail a confirmation to registrant, billing officer, and admin
 Mail a reminder to registrant X days before event. 
+Should this be controlled by an admin UI?
 
 
 == App availability
@@ -48,7 +51,7 @@ Done. 11.17.08 - Download all abstracts into a single zip file
 
 Done. 11.23.08
 Added a case statement to set fees based on status and going to the evening session.
-The fees/prices could be pulled out to the config.yml file.
+The fees/prices could be pulled out to the config.yml file or from an admin UI.
 Although, there are no plans to include a payment gateway. Instructions for paying by check or purchase order will be implemented. 
 Specifically, if registrants signup for dinner they will be charged a fee. 
 

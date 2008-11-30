@@ -170,7 +170,7 @@ table th {border-bottom:1px solid black;}
 }
 #footer{
 	margin-top:20px;
-	text-align:right;
+	text-align:center;
 }
 #adminHeader{
 	margin:0;
@@ -178,4 +178,18 @@ table th {border-bottom:1px solid black;}
 	color:#000;
 	font-size:0.8em;
 	text-align:right;
+}
+#regInfo ul {
+	margin:0;
+	padding:0;
+}
+#regInfo ul li {
+	list-style-type:none;
+}
+#payment ul {
+	margin:0;
+	padding:0;
+}
+#payment ul li {
+	list-style-type:none;
 }

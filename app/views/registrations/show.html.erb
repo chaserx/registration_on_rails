@@ -6,9 +6,9 @@
 <% end %>
 <h1>Registration Receipt</h1>
 <div id="thanks">
-	<p><%= @registration.created_at %></p>
+	<p><%= h @registration.created_at %></p>
 	<p>Thank you for registering, <%= prettyNameFormat %>. <br />Please use this receipt to send in your participant payment and keep a copy for your records.</p>
-	<p>Your confirmation number is: <%= @registration.id %></p>
+	<p>Your confirmation number is: <%= h @registration.id %></p>
 </div>
 <div id="eventInfo">
 	<h2><%= display_eventname %></h2>
@@ -18,28 +18,28 @@
 	<h4>Personal Info</h4>
 	<ul>
 		<li><%= prettyNameFormat %></li>
-		<li><%= @registration.organization %></li>
-		<li><%= @registration.status %></li>
+		<li><%= h @registration.organization %></li>
+		<li><%= h @registration.status %></li>
 	</ul>
 	<h4>Contact Info</h4>
 	<ul>
-		<li><%= @registration.email %></li>
-		<li><%= number_to_phone(@registration.phone, {:area_code => true}) %></li>
-		<li><%= @registration.address1 %><br />
-				<%= @registration.address2 %><br />
-				<%= @registration.city %>,&nbsp;<%= @registration.state %>&nbsp;<%= @registration.zip %></li>
+		<li><%= h @registration.email %></li>
+		<li><%= h number_to_phone(@registration.phone, {:area_code => true}) %></li>
+		<li><%= h @registration.address1 %><br />
+				<%= h @registration.address2 %><br />
+				<%= h @registration.city %>,&nbsp;<%= h @registration.state %>&nbsp;<%= h @registration.zip %></li>
 	</ul>
 	<h4>Registration Info</h4>
 	<ul>
-		<li>Lunch: <%= going_lunch?(@registration) %></li>
-		<li>Evening session: <%= going_esession?(@registration) %></li>
-		<li>Partysize for dinner: <%= @registration.partysize %></li>
+		<li>Lunch: <%= h going_lunch?(@registration) %></li>
+		<li>Evening session: <%= h going_esession?(@registration) %></li>
+		<li>Partysize for dinner: <%= h @registration.partysize %></li>
 		<li>Abstract: <%= getAbstract(@registration) %></li>
 	</ul>
 </div>
 <div id="payment">
 	<h2>Payment instructions</h2>
-	<p><strong>Registration Fees: <%= number_to_currency(@registration.fees) %></strong></p>
+	<p><strong>Registration Fees: <%= h number_to_currency(@registration.fees) %></strong></p>
 	<h3>Business officer</h3>
 	<ul>
 		<li><%=h @registration.bizperson %></li>
