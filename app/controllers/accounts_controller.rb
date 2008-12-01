@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
   before_filter :validate_brain_buster, :only => [:create]
   
   
-  before_filter :login_required, :only => [:new, :create] unless Account.nil?
+  before_filter :login_required, :only => [:new, :create], :unless => Account.nil?
 
   
   def new
