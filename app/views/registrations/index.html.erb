@@ -39,6 +39,7 @@
 		<th>Evening Session</th>
 		<th># for dinner</th>
 		<th>Fees</th>
+		<th>Abstract</th>
 		<th>Bus. Officer</th>
 		<th>Bus. Officer Email</th>
 		<th>Bus. Officer Phone</th>
@@ -64,6 +65,7 @@
 		<td><%= going_esession?(registration) %></td>
 		<td><%= h registration.partysize %></td>
 		<td><%= number_to_currency(h(registration.fees)) %></td>
+		<td><%= link_to("#{registration.abstract.original_filename}", registration.abstract.url) %></td>
 		<td><%= h registration.bizperson %></td>
 		<td><%= h registration.bizpersonemail %></td>
 		<td><%= h registration.bizpersonphone %></td>
