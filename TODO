@@ -5,6 +5,11 @@ Items left undone:
 Paperclip trying to validate file type even when file is null prior to edit/update_params
 
 
+== Admin
+
+Registrations/index needs to be more like a useful dashboard. I'm really paying a design tax twice on design for public and private views.
+
+
 == Security
 
 Lots to do here.
@@ -71,8 +76,12 @@ Need some professional help. A lot of work will be required to make this pretty.
 
 
 == Welcome
-
+Begin - 12.4.08
 Change map.root route to a welcome controller where to post a (semi-)static event page. 
 index action
 Static page with info and link to register
 Need a royalty free / creative commons image for the welcome page. 
+
+
+== License
+Find MIT license
