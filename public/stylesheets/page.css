@@ -117,7 +117,9 @@ color: #2E65A8;
 }
 
 #navlist a:hover { color: #2E65A8; }
-
+#header h1{
+	text-align:center;
+}
 #footer {
 	width:748px;
 	margin: 0 auto;
