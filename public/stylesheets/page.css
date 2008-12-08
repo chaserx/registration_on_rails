@@ -19,7 +19,7 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 748px;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
@@ -78,4 +78,49 @@ a {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+#navcontainer {
+	margin-top:10px;
+	margin-bottom:0;
+}
+#navlist
+{
+margin: 0;
+padding: 0 0 20px 0;
+border-bottom: 1px solid #2E65A8;
+}
+
+#navlist ul, #navlist li
+{
+margin: 0;
+padding: 0;
+display: inline;
+list-style-type: none;
+}
+
+#navlist a:link, #navlist a:visited
+{
+float: left;
+line-height: 14px;
+font-weight: bold;
+margin: 0 10px 4px 0;
+text-decoration: none;
+color: #999;
+}
+
+#navlist a:link#current, #navlist a:visited#current, #navlist a:hover
+{
+border-bottom: 4px solid #2E65A8;
+padding-bottom: 2px;
+background: transparent;
+color: #2E65A8;
+}
+
+#navlist a:hover { color: #2E65A8; }
+
+#footer {
+	width:748px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color:#fff;
 }
