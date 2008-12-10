@@ -7,7 +7,7 @@ Paperclip trying to validate file type even when file is null prior to edit/upda
 
 == Admin
 
-Registrations/index needs to be more like a useful dashboard. I'm really paying a design tax twice on design for public and private views.
+Registrations/index needs to be more like a useful dashboard. I'm really paying a design tax twice (maybe 3 times) on design for public and private views.
 
 
 == Security
