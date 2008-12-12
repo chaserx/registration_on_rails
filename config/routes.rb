@@ -9,6 +9,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :registrations
 
+  map.resource :dashboard
+  map.dashboard 'dashboard', :controller => 'dashboard', :action => 'show'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
