@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-  layout "admin"
+  layout "registrations"
   
   before_filter :login_required
     

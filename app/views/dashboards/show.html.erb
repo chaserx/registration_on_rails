@@ -1,1 +1,19 @@
-Hi There!
+<div id="adminHeader">
+	Welcome <%= current_account.username %>! Not you?
+  <%= link_to "Log out", logout_path %>
+</div>
+<div id="eventTitle">
+	<%= display_eventname %>
+</div>
+<div id="stats">
+	<ul>
+		<li><strong>Attendee count:  <span><%= number_of_attendees %></span></strong></li>
+		<li class="stat"><strong>Lunch count:  <span><%= number_of_attendees_for_lunch %></span></strong></li>
+		<li class="stat"><strong>Dinner count:  <span><%= number_of_attendees_for_dinner %></span></strong></li>
+		<li class="stat"><strong>Abstract count:  <span><%= number_of_abstracts %></span></strong></li>
+		<li class="stat"><strong>Latest attendee: <%= latest_attendee %></strong></li>
+	</ul>
+</div>
+<div class="clearthemall">
+	&nbsp;
+</div>
