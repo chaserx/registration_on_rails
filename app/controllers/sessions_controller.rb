@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if account
       session[:account_id] = account.id
       flash[:notice] = "Logged in successfully."
-      redirect_to root_url
+      redirect_to dashboard_url
     else
       flash.now[:error] = "Invalid login or password."
       render :action => 'new'
