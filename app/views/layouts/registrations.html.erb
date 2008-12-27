@@ -5,16 +5,30 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Registrations: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold', 'tablecloth' %>
+  <%= stylesheet_link_tag 'dashboard', 'tablecloth' %>
 	
 </head>
 <body>
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield  %>
-<div id="footer">
-	<%= image_tag("ruby.png", :alt => "Ruby is Love") %><br />Powered by Ruby on Rails 
+<div id="header">
+	<div style="color: green"><%= flash[:notice] %></div>
+	<div id="adminHeader">
+		Welcome <%= current_account.username %>! <%= link_to "Log out", logout_path %>
+	</div>
+	<div id="eventTitle">
+		<%= display_eventname %>
+	</div>
+	<div id="nav">
+		<ul id="navigation">
+			<li><%= link_to 'Dashboard', dashboard_url, :class => css_for('dashboards') %></li>
+			<li><%= link_to 'Registrations', registrations_url, :class => css_for('registrations') %></li>
+		</ul>
+	</div>
 </div>
-
+<div id="content" class="clearthemall">
+	<%= yield  %>
+</div>
+<div id="footer">
+	This is the footer
+</div>
 </body>
 </html>

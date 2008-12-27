@@ -23,4 +23,8 @@ module ApplicationHelper
   def display_director_address
     return APP_CONFIG['director_address']
   end
+  
+  def css_for(link)
+    controller.controller_name.downcase == link.downcase ? 'current' : 'plain'
+  end
 end
