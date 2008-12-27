@@ -5,12 +5,18 @@
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'admin' %>
     <%= yield(:head) %>
+		<%= javascript_include_tag :defaults %>
+		
   </head>
   <body>
     <div id="container">
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
+		<!-- CODE FROM http://travisonrails.com/2008/08//-->
+		<%- flash.each do |key, msg| -%>
+		<div id="<%= key %>">
+			<p><%= msg %> <%= link_to_function 'close', "Effect.Fade('#{key}')" %></p>
+		</div>
+		<%- end -%>
+			
       
       <%- if show_title? -%>
         <h1><%=h yield(:title) %></h1>

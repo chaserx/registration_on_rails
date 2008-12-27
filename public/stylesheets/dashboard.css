@@ -35,19 +35,42 @@ body, p, ol, ul, td {
 }
 #stats{
 		margin-top:50px;
+		margin-left:46px;
 		width:25%;
 		border:1px solid #80B5D0;
 		background-color:#C6D9E9;
 		padding:20px;
 }
-#stats ul, #stats ul li {display:inline;}
-#stats ul li {list-style-type:none;}
+#stats ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#stats h3{
+	border-bottom: 1px solid #80B5D0;
+}
 .stat{
 		padding-left:20px;
 }
 .stat span{}
 .clearthemall{
 	clear: both;
+}
+#funcs{
+		margin-top:1em;
+		margin-left:46px;
+		width:25%;
+		border:1px solid #80B5D0;
+		background-color:#C6D9E9;
+		padding:20px;
+}
+#funcs ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#funcs h3{
+	border-bottom: 1px solid #80B5D0;
 }
 #navigation{
 	float:left;

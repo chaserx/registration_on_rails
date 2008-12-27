@@ -1,11 +1,23 @@
 <div id="stats">
+	<h3>Quick Look</h3>
 	<ul>
-		<li><strong>Attendee count:  <span><%= number_of_attendees %></span></strong></li>
-		<li class="stat"><strong>Lunch count:  <span><%= number_of_attendees_for_lunch %></span></strong></li>
-		<li class="stat"><strong>Dinner count:  <span><%= number_of_attendees_for_dinner %></span></strong></li>
-		<li class="stat"><strong>Abstract count:  <span><%= number_of_abstracts %></span></strong></li>
-		<li class="stat"><strong>Latest attendee: <%= latest_attendee %></strong></li>
+		<li><p><strong>Attendee count:  <span><%= number_of_attendees %></span></strong></p></li>
+		<li><p><strong>Lunch count:  <span><%= number_of_attendees_for_lunch %></span></strong></p></li>
+		<li><p><strong>Dinner count:  <span><%= number_of_attendees_for_dinner %></span></strong></p></li>
+		<li><p><strong>Abstract count:  <span><%= number_of_abstracts %></span></strong></p></li>
+		<li><p><strong>Latest attendee: <%= latest_attendee %></strong></p></li>
 	</ul>
+</div>
+<div id="funcs">
+	<h3>Quick Functions</h3>
+	<ul>
+		<li><p><%= link_to 'New registration', new_registration_path %></p></li>
+		<li><p><%= link_to 'Download ALL Registrations (CSV File)', formatted_registrations_path(:csv) %></p></li>
+		<li><p><%= link_to 'Download ALL Abstracts (ZIP File)', formatted_registrations_path(:zip) %></p></li>
+	</ul>
+</div>
+<div id="searchbox">
+	
 </div>
 <div class="clearthemall">
 	&nbsp;
