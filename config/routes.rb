@@ -3,14 +3,17 @@ ActionController::Routing::Routes.draw do |map|
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.admin 'admin', :controller => 'accounts', :action => 'index'
+  
+
   map.resources :sessions
 
   map.resources :accounts
 
   map.resources :registrations
 
-  map.resource :dashboard
-  map.dashboard 'dashboard', :controller => 'dashboard', :action => 'show'
+  map.resources :dashboards
+  map.dashboard 'dashboard', :controller => 'dashboards', :action => 'show'
+  map.reglist 'reglist', :controller => 'dashboards', :action => 'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

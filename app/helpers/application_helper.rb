@@ -25,6 +25,18 @@ module ApplicationHelper
   end
   
   def css_for(link)
-    controller.controller_name.downcase == link.downcase ? 'current' : 'plain'
+    #controller.controller_name.downcase == link.downcase ? 'current' : 'plain'
+    controller.action_name.downcase == link.downcase ? 'current' : 'plain'
+  end
+  
+  def format_name(reg)
+    return reg.title + " " + reg.firstname + " " + reg.lastname
+  end
+  
+  def total_reg_fees
+    total = 0
+    registrations = Registration.find(:all)
+    registrations.each{|e| total += e.fees}
+    return total
   end
 end
