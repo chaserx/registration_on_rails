@@ -26,6 +26,7 @@ module ApplicationHelper
   
   def css_for(link)
     #controller.controller_name.downcase == link.downcase ? 'current' : 'plain'
+    #credit ryan heath http://rpheath.com/posts/268-tabbed-navigation-tip-for-rails
     controller.action_name.downcase == link.downcase ? 'current' : 'plain'
   end
   

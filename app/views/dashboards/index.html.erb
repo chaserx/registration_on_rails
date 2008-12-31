@@ -1,8 +1,9 @@
 <div id="registrations">
-	<dl>
+	<ul>
 		<% for registration in @registrations %>
-			<dt><%= link_to(format_name(registration), registration)  %></dt>
-			<dd><%= link_to 'Edit', edit_registration_path(registration) %> | <%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></dd>
+			<li class="<%= cycle('odd', 'even') %>"><strong><%= link_to(format_name(registration), registration)  %></strong><br /><span><%= link_to 'Edit', edit_registration_path(registration) %> | <%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></span></li>
 		<% end %>
-	</dl>
+	</ul>
+		
+	
 </div>
