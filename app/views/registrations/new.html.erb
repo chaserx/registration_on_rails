@@ -57,7 +57,7 @@
 	</fieldset>
 </div>
 <div>
-	<fieldset><legend>Turing test</legend>
+	<fieldset><legend>Reverse Turing Test</legend>
 		<%= render :partial => '/captcha' %> 
 	</fieldset>
 </div>
@@ -69,6 +69,6 @@
   </p>
 <% end %>
 <% if logged_in? %>
-<%= link_to 'Back', registrations_path %>
+<%= link_to 'Back', dashboard_path %>
 <% end %>
 </div>
