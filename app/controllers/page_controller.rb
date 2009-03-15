@@ -11,4 +11,10 @@ class PageController < ApplicationController
   def privacy    
   end
 
+  def schedule
+  end
+  
+  def travel
+  end
+
 end

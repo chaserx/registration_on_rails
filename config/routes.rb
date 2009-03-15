@@ -14,6 +14,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :dashboards
   map.dashboard 'dashboard', :controller => 'dashboards', :action => 'show'
   map.reglist 'reglist', :controller => 'dashboards', :action => 'index'
+  
+  map.with_options :controller => 'page' do |page|
+    page.schedule 'schedule', :action => 'schedule'
+    page.travel 'travel', :action => 'travel'
+    page.about 'about', :action => 'index'
+    page.contact 'contact', :action => 'contact'
+    page.privacy 'privacy', :action => 'privacy'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 

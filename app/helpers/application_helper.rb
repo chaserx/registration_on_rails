@@ -40,4 +40,9 @@ module ApplicationHelper
     registrations.each{|e| total += e.fees}
     return total
   end
+  
+  def last_update
+    lastRegistration = Registration.find(:last)
+    return lastRegistration.created_at
+  end
 end

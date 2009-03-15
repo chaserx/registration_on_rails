@@ -16,10 +16,10 @@
 				<h1><%= display_eventname %></h1>
 				<div id="navcontainer">
 					<ul id="navlist">
-						<li><a href="http://some-site.com/">Registration</a></li>
-						<li><a href="http://some-site.com/">Schedule</a></li>
-						<li><a href="http://some-site.com/">Travel</a></li>
-						<li><a href="http://some-site.com/">About</a></li>
+						<li><%= link_to "Register Now", new_registration_path %></li>
+						<li><%= link_to "Schedule", schedule_path %></li>
+						<li><%= link_to "Travel", travel_path %></li>
+						<li><%= link_to "About", about_path %></li>
 					</ul>
 				</div>
 			</div>
