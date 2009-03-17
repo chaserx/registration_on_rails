@@ -24,6 +24,7 @@ body, p, ol, ul, td {
 	color: #fff;
 	margin:0;
 	padding:0;
+	width:100%;
 }
 #adminHeader{
 	margin:0;
@@ -31,9 +32,12 @@ body, p, ol, ul, td {
 	/*color:#000;*/
 	font-size:0.8em;
 	text-align:right;
+	background-color:#000;
+	width:100%;
 }	
 #eventTitle{
 	padding:0 0 0 46px;
+	margin:0;
 }
 #stats{
 		margin-top:25px; 
