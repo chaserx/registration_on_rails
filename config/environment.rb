@@ -26,7 +26,9 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "fastercsv", :version => '1.4.0'
-  config.gem "rubyzip", :version => '0.9.1'
+  
+  #Rubyzip somehow doesn't play nicely with Rails config. Gem has always been installed. Don't know what is up with this error.
+  #config.gem "rubyzip"
 
 
   # Only load the plugins named here, in the order given. By default, all plugins 

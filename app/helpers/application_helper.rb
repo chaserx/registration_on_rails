@@ -42,7 +42,7 @@ module ApplicationHelper
   end
   
   def last_update
-    lastRegistration = Registration.find(:last)
+    lastRegistration = Registration.find(:last, :order => 'created_at ASC')
     return lastRegistration.created_at
   end
 end
