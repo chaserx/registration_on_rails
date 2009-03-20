@@ -145,7 +145,7 @@ body, p, ol, ul, td {
 #registrations ul{
 	list-style-type:none;
 	margin:0;
-	padding:0;
+	padding: 1em 0;
 }
 #registrations ul li.even{
 	background:#ccc;
