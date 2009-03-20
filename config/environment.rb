@@ -25,7 +25,8 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "fastercsv"
+  config.gem "fastercsv", :version => '1.4.0'
+  config.gem "rubyzip", :version => '0.9.1'
 
 
   # Only load the plugins named here, in the order given. By default, all plugins 
