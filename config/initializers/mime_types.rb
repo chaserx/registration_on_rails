@@ -3,7 +3,9 @@
 # Add new mime types for use in respond_to blocks:
 Mime::Type.register "text/richtext", :rtf
 # Mime::Type.register_alias "text/html", :iphone
-Mime::Type.register "text/csv", :csv
+
+#commented out CSV mime type to eliminate an error on server start. still works apparently.
+#Mime::Type.register "text/csv", :csv
 Mime::Type.register "application/zip", :zip
 Mime::Type.register "application/vnd.openxmlformats-officedocument.wordprocessingml.document", :docx
 Mime::Type.register "application/msword", :doc
