@@ -4,6 +4,4 @@
 			<li class="<%= cycle('odd', 'even') %>"><strong><%= link_to(format_name(registration), registration)  %></strong><br /><%= hasFees(registration) %> <%= singleOrCompany(registration) %> <%= hasEveningSession(registration) %> <%= hasLunch(registration) %> <br /><span><%= link_to 'Edit', edit_registration_path(registration) %> | <%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></span></li>
 		<% end %>
 	</ul>
-		
-	
 </div>
